@@ -1,300 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songyang W. | BME Ph.D. Candidate</title>
-    <meta name="description" content="Portfolio of Songyang W, BioMedical Engineering Ph.D. candidate and AI/ML Data Scientist.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Custom Config for Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1e40af', // Deep Blue
-                        secondary: '#334155', // Slate
-                        accent: '#0f172a', // Dark Slate
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        /* Custom Styles for Glassmorphism & Hero */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-pattern {
-            background-image: radial-gradient(#ffffff 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.1;
-        }
-    </style>
+    <title>Songyang W - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-xl font-serif font-bold text-slate-900 tracking-tight">Songyang W.</a>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
-                    <a href="#work" class="text-sm font-medium hover:text-primary transition-colors">Research</a>
-                    <a href="#memos" class="text-sm font-medium hover:text-primary transition-colors">Memos</a>
-                    <a href="#personal" class="text-sm font-medium hover:text-primary transition-colors">Personal</a>
-                    <a href="mailto:songyw@bu.edu" class="px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-primary transition-colors">Contact</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#home" class="block py-2 font-medium hover:text-primary">Home</a>
-                <a href="#about" class="block py-2 font-medium hover:text-primary">About</a>
-                <a href="#work" class="block py-2 font-medium hover:text-primary">Research</a>
-                <a href="#memos" class="block py-2 font-medium hover:text-primary">Memos</a>
-                <a href="#personal" class="block py-2 font-medium hover:text-primary">Personal</a>
-            </div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Songyang W</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Work ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#">Connectomics</a>
+                        <a href="#">Homecage</a>
+                        <a href="#">Hemodynamic Monitoring</a>
+                        <a href="#">Waveform</a>
+                        <a href="#">Heart-Brain Association</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Personal ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#">Workout</a>
+                        <a href="#">Cycling</a>
+                        <a href="#">Fencing</a>
+                        <a href="#">Kendo</a>
+                        <a href="#">CSCS Study</a>
+                    </div>
+                </li>
+                <li><a href="#">Resume</a></li>
+                <li class="dropdown">
+                    <a href="#">Memo Writing ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#">120224 Lab Memo</a>
+                        <a href="#">052724 Lab Memo</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section min-h-screen flex items-center pt-16 text-white">
-        <div class="absolute inset-0 hero-pattern"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
-                    Bridging Neuroscience & <br> Machine Learning
-                </h1>
-                <p class="text-xl md:text-2xl text-blue-100 font-light mb-8">
-                    Ph.D. Candidate in Biomedical Engineering at Boston University
-                </p>
-                <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Specializing in neural signal processing, end-to-end ML pipelines, and large-scale datasets (500TB+) to decipher brain circuitry.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#work" class="px-8 py-3 rounded-full bg-white text-slate-900 font-semibold hover:bg-blue-50 transition-all shadow-lg">View Projects</a>
-                    <a href="#about" class="px-8 py-3 rounded-full border border-slate-400 text-white font-semibold hover:bg-white/10 transition-all">About Me</a>
-                </div>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="https://lh3.googleusercontent.com/profile/picture/0" alt="Songyang W" class="profile-pic">
+            <h1>Hi, I'm Songyang</h1>
+            <p>BioMedical Engineering Ph.D. candidate from Boston University.</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>About Me</h2>
+        <p>
+            Ph.D. candidate in Biomedical Engineering and AI/ML Data Scientist specializing in neural and sensor data analysis. 
+            Experienced in developing end-to-end ML pipelines—from neural signal acquisition and preprocessing to model training, 
+            evaluation, and deployment on Docker/cloud platforms. 
+        </p>
+        <p>
+            Proficient in PyTorch, deep learning/machine learning, biomedical/neural signal processing, ephys data 
+            (EEG, ECG, EMG, ECoG), behavioral data, and large-scale datasets (500 TB+). 
+            Passionate about translating neuroscience and machine learning into next-generation brain-computer interfaces.
+        </p>
+    </section>
+
+    <section class="container">
+        <h2>Selected Work And Life</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Connectomics</h3>
+                <p>Exploring Neuronal Circuitry Architecture in the Somatosensory Cortex: Unraveling Mechanisms of Working Memory and Decision Making</p>
+            </div>
+            <div class="card">
+                <h3>HomeCage</h3>
+                <p>Magnetic-based Automatic Head-Fixed Home Cage Design</p>
+            </div>
+            <div class="card">
+                <h3>Senior Design Project</h3>
+                <p>Non-invasive real-time portable blood pressure measurement device</p>
+            </div>
+            <div class="card">
+                <h3>Brain Heart Connectivity</h3>
+                <p>Heart-Brain Association Studies</p>
+            </div>
+            <div class="card">
+                <h3>Waveform Project</h3>
+                <p>Signal analysis and processing</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <!-- Placeholder for your photo -->
-                    <div class="absolute -inset-4 bg-blue-100 rounded-2xl -z-10 transform -rotate-2"></div>
-                    <img src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Research Lab" class="rounded-xl shadow-lg w-full object-cover h-[400px]">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-serif font-bold text-slate-900 mb-6">About My Work</h2>
-                    <p class="text-slate-600 mb-4 leading-relaxed">
-                        I am a Ph.D. candidate and AI/ML Data Scientist experienced in developing end-to-end ML pipelines—from neural signal acquisition and preprocessing to model training, evaluation, and deployment on Docker and cloud platforms.
-                    </p>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        My technical proficiency covers <strong>PyTorch, Deep Learning, and Biomedical Signal Processing</strong> (EEG, ECG, EMG, ECoG). I work with massive datasets to translate neuroscience into next-generation brain-computer interfaces.
-                    </p>
-                    
-                    <h3 class="font-bold text-slate-900 mb-3">Technical Skills</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Python / PyTorch</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Signal Processing</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Cloud / Docker</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Brain-Computer Interface</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Large Scale Data (500TB+)</span>
-                    </div>
-                </div>
+    <section class="container">
+        <h2>Hobbies</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/profile/picture/3" alt="Fencing"> 
+                <h3>Fencing</h3>
+            </div>
+            <div class="card">
+                <h3>Kendo</h3>
+            </div>
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdHrCxc_WyNFOF-ElVvDyemwIY5XooYDU1Mn07OYtC91GVakKf2jNQjeLj1F2lDGjHwSV7LYA0sqR4esDL9HKKLz4An5bIR20M4EaR7JdHotOmMgEh9ixItkQ8qb77MSuZ6Pfa5oQappbtVG4DKdczuXVWAEPII-64WM9vq7zRI_g0mnoRWlnoarVOI_JQFDP7vtNb9-glHrftFnlQZesUAuC_GI8VOpL-91NQ=w1280" alt="Cycling">
+                <h3>Cycling</h3>
+            </div>
+            <div class="card">
+                <h3>Photography</h3>
             </div>
         </div>
     </section>
 
-    <!-- Research & Projects Section -->
-    <section id="work" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">Research & Projects</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Connectomics -->
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1555677241-19602f932e68?w=800" alt="Connectomics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-primary uppercase mb-2">Neuroscience</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Connectomics</h3>
-                        <p class="text-slate-600 text-sm mb-4">Exploring Neuronal Circuitry Architecture in the Somatosensory Cortex. Unraveling mechanisms of Working Memory and Decision Making.</p>
-                        <ul class="text-xs text-slate-500 list-disc list-inside mb-4 space-y-1">
-                            <li>Transmission & Scanning EM</li>
-                            <li>Stitching and Stacking</li>
-                            <li>Neuronal Tracing</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- HomeCage -->
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800" alt="HomeCage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-primary uppercase mb-2">Engineering</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">HomeCage Design</h3>
-                        <p class="text-slate-600 text-sm mb-4">Magnetic-based Automatic Head-Fixed Home Cage Design featuring automated LabView code for behavioral experiments.</p>
-                    </div>
-                </article>
-
-                <!-- Stroke Sensor -->
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800" alt="Stroke Sensor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-primary uppercase mb-2">Medical Device</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Hemodynamic Sensor</h3>
-                        <p class="text-slate-600 text-sm mb-4">Development of a non-invasive, real-time portable blood pressure and hemodynamic monitoring device for Ischemic Stroke.</p>
-                    </div>
-                </article>
-
-                <!-- Waveform -->
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Waveform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-primary uppercase mb-2">Data Analysis</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Waveform Project</h3>
-                        <p class="text-slate-600 text-sm mb-4">Advanced visualization and analysis of complex neural waveforms.</p>
-                    </div>
-                </article>
-
-                <!-- Heart-Brain -->
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800" alt="Heart Brain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-primary uppercase mb-2">UROP Research</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Heart-Brain Association</h3>
-                        <p class="text-slate-600 text-sm mb-4">Investigating the physiological connectivity between cardiac rhythms and neural activity.</p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Memo Writing Section -->
-    <section id="memos" class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-8">Memo Writing & Presentations</h2>
-            <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <i class="fas fa-file-alt text-primary mt-1 mr-3"></i>
-                        <div>
-                            <span class="block font-semibold text-slate-900">12/02/24 Lab Memo Presentation</span>
-                            <span class="text-sm text-slate-500">Internal Lab Update</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-file-alt text-primary mt-1 mr-3"></i>
-                        <div>
-                            <span class="block font-semibold text-slate-900">05/27/24 Lab Memo Presentation</span>
-                            <span class="text-sm text-slate-500">Internal Lab Update</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal / Hobbies -->
-    <section id="personal" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Life Outside the Lab</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-fist-raised text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">Kendo</h3>
-                </div>
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-mask text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">Fencing</h3>
-                </div>
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-bicycle text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">Cycling</h3>
-                </div>
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-camera text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">Photography</h3>
-                </div>
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-dumbbell text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">Workout</h3>
-                </div>
-                <div class="text-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-book-open text-3xl text-primary mb-3"></i>
-                    <h3 class="font-bold">CSCS Study</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-4 text-xl text-white font-serif">Songyang W.</p>
-            <a href="mailto:songyw@bu.edu" class="text-lg hover:text-white transition-colors mb-6 inline-block">songyw@bu.edu</a>
-            <div class="text-sm">
-                &copy; <script>document.write(new Date().getFullYear())</script> Songyang W. All rights reserved.
-            </div>
-        </div>
+    <footer>
+        <p>Get in touch at <a href="mailto:songyw@bu.edu">songyw@bu.edu</a></p>
+        <p><a href="https://sites.google.com/bu.edu/songyangs-diary/home">Songyang's Diary</a></p>
     </footer>
 
-    <!-- Mobile Menu Script -->
-    <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>
